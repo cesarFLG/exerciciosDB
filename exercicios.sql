@@ -37,5 +37,35 @@ hr.employees;
 -- para os funcionarios que não recebem comissão o valor retornado na coluna salario *12* comissão é nulo pois qualquer valor vezes null retorna null --
 
 -- exercicio10 --
-select last_name as "Sobrenome", salary as "Salario", salary * 12 as "Salario anual" from 
+select last_name as "Sobrenome", salary as "Salário Mensal", salary * 12 as "Salário Anual" from 
 hr.employees;
+
+-- exercicio11 --
+SELECT CONCAT_WS(' ', first_name, last_name) AS Nome_Completo, CONCAT('E-mail: ', email) AS Identificacao FROM 
+    hr.employees;
+   
+-- exercicio12 --
+select concat_ws(' ', last_name, ' trabalha no cargo ', job_id, ' e ganha ', salary, ' por mês.') as "Apresentação do Funcionario" from
+hr.employees;
+
+-- exercicio13 --
+select concat_ws(' ', job_title, ' R$', min_salary,' Até ', ' R$', max_salary) as "faixa Salarial" from 
+hr.jobs;
+
+-- exercicio14 --
+select distinct department_id from
+hr.employees;
+
+-- exercicio15 --
+select distinct job_id from 
+hr.employees;
+
+-- exercicio16 --
+select distinct job_id, department_id from 
+hr.employees;
+
+-- exercicio17 --
+SELECT  CONCAT(last_name, ', ', first_name) AS "Funcionário",
+    job_id AS "Cargo", salary AS "Salário Mensal", salary * 12 AS "Salário Anual",
+    salary * 12 * commission_pct AS "Comissão Anual", (salary * 12) + (salary * 12 * commission_pct) AS "Remuneração Anual Total"
+FROM hr.employees;
