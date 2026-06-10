@@ -47,8 +47,8 @@ SELECT CONCAT_WS(' ', first_name, last_name) AS Nome_Completo, CONCAT('E-mail: '
     hr.employees;
    
 -- exercicio12 --
-select concat_ws(' ', last_name, ' trabalha no cargo ', job_id, ' e ganha ', salary, ' por mês.') as "Apresentação do Funcionario" from
-hr.employees;
+select concat_ws(' ', last_name, ' trabalha no cargo ', job_id, ' e ganha ', salary, ' por mês.') as "Apresentação do Funcionario" 
+from hr.employees;
 
 -- exercicio13 --
 select concat_ws(' ', job_title,'Ganha de:', ' R$', min_salary,' Até ', ' R$', max_salary) as "faixa Salarial" 
