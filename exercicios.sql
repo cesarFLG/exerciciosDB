@@ -67,10 +67,10 @@ select distinct job_id, department_id
 from hr.employees;
 
 -- exercicio17 --
-SELECT  concat_ws(' ', last_name, first_name) AS "Funcionário",
-    job_id 		AS "Cargo", 
-    salary 		AS "Salário Mensal", 
-    salary * 12 AS "Salário Anual",
-    salary * 12 * commission_pct 				AS "Comissão Anual", 
-    (salary * 12) + (salary * 12 * commission_pct) AS "Remuneração Anual Total" 
+SELECT  concat_ws(' ', last_name, first_name)		AS "Funcionário",
+    job_id 											AS "Cargo", 
+    salary 											AS "Salário Mensal", 
+    salary * 12 									AS "Salário Anual",
+    salary * 12 * commission_pct 					AS "Comissão Anual", 
+    (salary * 12) + (salary * 12 * commission_pct)	AS "Remuneração Anual Total" 
     FROM hr.employees;
